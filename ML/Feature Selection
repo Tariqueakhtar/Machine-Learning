@@ -1,0 +1,24 @@
+Logistic Regression Coefficients
+
+Linear regression is a straightforward approach for predicting a quantitative response Y on the basis of a different predictor variable X1, X2, ... Xn. It assumes that there is a linear relationship between X(s) and Y. Mathematically, we can write this linear relationship as Y ≈ β0 + β1X1 + β2X2 + ... + βnXn.
+
+The magnitude of the coefficients is directly influenced by the scale of the features. Therefore, to compare coefficients across features, it is importance to have all features within the same scale. This is why, normalisation is important for variable importance and feature selection in linear models. Normalisation is important as well for model performance.
+
+In addition, Linear Regression makes the following assumptions over the predictor variables X:
+
+    Linear relationship with the outcome Y
+    Multivariate normality (X should follow a Gaussian distribution)
+    No or little multicollinearity (Xs should not be linearly related to one another)
+    Homoscedasticity (variance should be the same)
+
+Homoscedasticity, also known as homogeneity of variance, describes a situation in which the error term (that is, the “noise” or random disturbance in the relationship between the independent variables (Xs) and the dependent variable (Y)) is the same across all values of the independent variables.
+
+Therefore, there are a lot of assumptions that need to be met in order to make a fair comparison of the features by using only their regression coefficients.
+
+In addition, these coefficients may be penalised by regularisation, therefore being smaller than if we were to compare only that individual feature with the target.
+
+Having said this, you can still select features based on linear regression coefficients, provided you keep all of these in mind at the time of analysing the outcome.
+
+Personally, this is not my feature selection method of choice, although I find it useful to interpret the output of the model.
+
+I will demonstrate how to select features based on the regression coefficients using sklearn on a classification problem, using the Paribas claims dataset from Kaggle.
